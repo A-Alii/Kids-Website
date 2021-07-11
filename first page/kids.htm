@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+   <html lang="en">
+      <head>
+                 <title>Kids</title>
+                <meta charset="utf-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+          var i = 0; 			// Start Point
+          var images = [];	// Images Array
+          var time = 3500;	// Time Between Switch
+	 
+// Image List
+           images[0] = "10.jpg";
+images[1] = "88.jpg";
+images[2] = "90.jpg";
+
+// Change Image
+function changeImg(){
+	document.slide.src = images[i];
+
+	// Check If Index Is Under Max
+	if(i < images.length - 1){
+	  // Add 1 to Index
+	  i++; 
+	} else { 
+		// Reset Back To O
+		i = 0;
+	}
+
+	// Run function every x seconds
+	setTimeout("changeImg()", time);
+}
+
+// Run function when page loads
+window.onload=changeImg;
+    </script>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin:0;
+}
+
+/* Style the header */
+.header {
+    background-color: #f1f1f1;
+    padding:0;
+    margin: 0;
+}
+    span{
+        border: 1px solid #ddd; 
+          text-shadow: 2px 2px 5px red;
+    }
+    span:hover{
+        cursor: pointer;
+    }
+    a{
+     text-decoration: none;
+        
+    }
+    a:hover{
+        color: blue;<a href="#">
+    }
+/* Style the </a>top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    padding:5px;
+    margin: 0px;
+}
+
+/* Style the topnav links */
+.topnav a {
+    display: inline;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #fff;
+    color: black;
+    text-shadow: 2px 2px 5px red;
+    font-size: bold;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+    }
+    h2{
+        font-family: serif;
+        color: cornflowerblue;
+        text-shadow: 2px 2px 5px red;
+    }
+    img {
+            opacity: 1.0;
+    filter: alpha(opacity=100);
+    
+     /* For IE8 and earlier */
+}
+
+.row img:hover {
+    opacity: 0.2;
+    filter: alpha(opacity=50);
+        border: 3px solid #000;
+ /* For IE8 and earlier */
+}
+    div.gallery {
+    margin: 5px;
+    border: 1px solid #fff;
+    float: left;
+    width: 180px;
+         -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    transition: width 2s, height 2s, transform 2s;
+}
+
+div.gallery:hover {
+    border: 1px solid red;
+   transform: rotate(180deg);
+    transform: rotate(360deg);
+    
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+    .decoration img:hover{
+        border: none;
+         opacity: 1;
+    }
+    .pagination {
+    width: auto;
+    height: 50px;
+    display: inline-block;
+    font-size: 50px;
+    
+}
+
+.pagination a {
+    color:#333;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color:#ccc;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ccc;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+     <img style="margin: 0;padding: 0;background: cover;" name="slide">
+</div>
+<div class="topnav">
+  <a href="#">Bathtime Made Easy</a>
+  <a href="#">Food for Your Miracle</a>
+  <a href="#">DNA Miracles™ Naturals</a>
+    </div></center>
+
+<div class="row">
+  <div class="column">
+    <h2>Bathtime Made Easy</h2>
+    <div class="gallery">
+  <a target="_blank" href="img_fjords.jpg">
+    <img src="1.jpg" alt="Trolltunga Norway" width="300" height="200">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a> </div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="2.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="3.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="5.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+      <div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="6.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="7.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="8.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div><div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="13.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="1.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="2.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+  
+</div>
+      <div class="decoration"> <img  src="gif.gif"></div>
+  </div>
+    
+  <div class="column">
+    <h2>Food for Your Miracle</h2>
+<div class="gallery">
+  <a target="_blank" href="img_fjords.jpg">
+    <img src="14.jpg" alt="Trolltunga Norway" width="300" height="200">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="15.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="26.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="25.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+      <div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="18.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="26.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="23.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div><div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="21.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="22.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="23.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+      </div>
+    <video style="cursor: pointer;" width="400" controls>
+  <source src="food.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+  </div>
+  <div class="column">
+    <h2>DNA Miracles™ Naturals</h2>
+<div class="gallery">
+  <a target="_blank" href="img_fjords.jpg">
+    <img src="30.jpg" alt="Trolltunga Norway" width="300" height="200">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="31.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="32.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="33.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+      <div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="34.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="35.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="36.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div><div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="37.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="38.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="40.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc"><del>$35.95</del><br>$33.95<br>By DNA Miracles® Sold by DNA Miracles®<br><a href="#"><span>Buy Now</span></a></div>
+  </div>
+    </div>
+       <div class="decoration"> <img  src="89.jpg"></div>
+</div>
+            <center>
+    <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="file:///C:/Users/Ahmed%20Ali/Desktop/kids/progect/%D9%85%D9%83%D8%A7%D9%86%20%D9%84%D9%84%D8%B7%D9%81%D9%84/second%20page/kids.htm">1</a>
+    <a href="file:///C:/Users/Ahmed%20Ali/Desktop/kids/progect/%D9%85%D9%83%D8%A7%D9%86%20%D9%84%D9%84%D8%B7%D9%81%D9%84/third/third.htm">2</a>
+    <a href="file:///C:/Users/Ahmed%20Ali/Desktop/kids/progect/%D9%85%D9%83%D8%A7%D9%86%20%D9%84%D9%84%D8%B7%D9%81%D9%84/first%20page/contact%20us%20.html">3</a>
+    <a href="#">&raquo;</a>
+</div>
+    </center>
+   <br>
+    <br>
+    <hr>
+    <hr>
+    <center>
+        <div class="finish"><img src="66.jpg"></div>
+    </center>
+</body>
+</html>

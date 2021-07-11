@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+            <script>
+     var i = 0; 			// Start Point
+var images = [];	// Images Array
+var time = 3500;	// Time Between Switch
+	 
+// Image List
+images[0] = "100.jpg";
+images[1] = "200.jpg";
+images[2] = "300.jpg";
+
+// Change Image
+function changeImg(){
+	document.slide.src = images[i];
+
+	// Check If Index Is Under Max
+	if(i < images.length - 1){
+	  // Add 1 to Index
+	  i++; 
+	} else { 
+		// Reset Back To O
+		i = 0;
+	}
+
+	// Run function every x seconds
+	setTimeout("changeImg()", time);
+}
+
+// Run function when page loads
+window.onload=changeImg;
+    </script>
+    <title>
+       my pages
+    </title>
+    <style>
+        *{
+            margin: 0;
+        }
+/*-----------------------------------------*/        
+        .min{
+            width: 150px;
+            height: 3200px;
+            float: left;
+            background: #fff;
+            
+/*--------------------------------------------*/           
+        }
+         .list{
+            background-color:#fff;
+            width: 160px;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+    /*---------------------------------------*/    
+        .menu{
+            height: auto;
+            width: 70px;
+        }
+/*------------------------------------------*/        
+        h1{
+            color: blue;
+            font-family: serif;
+            font-weight: 800px;
+        }
+        h2{
+            font-family: sans-serif;
+        }
+/*------------------------------------*/        
+        ul a{
+            display: block;
+             list-style-type: none;
+            text-decoration: none;
+            text-align:left;
+            font-size: bold;
+            color: darkblue;
+        }
+        ul a:hover{
+            color: blue;
+        }
+/*-----------------------------------*/        
+        .blog{
+            width: 100%;
+            height: 3000px;
+            background: #FFF;
+            padding-top: 0px;
+            padding-bottom: 22px;
+        }
+        .blog .part{
+            width: 20%;
+            height: 300px;
+             float: left;
+            margin-left:2%;
+            margin-bottom:22%;
+            
+        }
+/*--------------------------------------------------*/        
+        .blog .part:first-child , .blog .part:nth-child(20){
+            margin-left: 60px;
+        }
+        .blog .part img{
+            width: 100%;
+            margin-bottom: 0;
+            border: 1px solid #000;
+            
+        }
+        .blog .part img:hover{
+             opacity: 0.2;
+    filter: alpha(opacity=50);
+            box-shadow: 
+            
+        }
+        .blog .part p{
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            background: #fff;
+            line-height: 1.7;
+            padding-top: 40px;
+            border: 1px solid #000;
+        }
+        .blog .part button{
+            background: #D84780;
+            border: 0;
+            width: 180px;
+            height: 30px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .blog .part button:hover{
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+/*-------------------*/        
+        .content{
+            margin-left: 100px;
+        }
+/*---------------------------------------------*/        
+            .pagination {
+    width: auto;
+    height: 50px;
+    display: inline-block;
+    font-size: 50px;
+    
+}
+
+.pagination a {
+    color:#333;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color:#ccc;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ccc;
+        }
+/*-------------------------------------------------------------*/    
+    </style>
+<body>
+    <div class="min">
+        <img src="gif.gif" width="150px" height="200px">
+          <h2> Category</h2>
+        
+               <ul style=" list-style-type: none;">
+                                   
+           <li> <a href="#"> <h3>Bathing</h3></a> </li>
+               <li> <a href="#"> <h3>Bedding</h3></a> </li> 
+               <li> <a href="#"> <h3>Car Seats</h3></a> </li> 
+               <li> <a href="#"> <h3>Clothing</h3></a> </li> 
+               <li> <a href="#"> <h3>Diapering</h3></a> </li>
+               <li> <a href="#"> <h3>Feeding</h3></a> </li> 
+               <li> <a href="#"> <h3>Furniture</h3></a> </li>
+               <li> <a href="#"> <h3>Healthcare</h3></a> </li> 
+               <li> <a href="#"> <h3>Nutrition</h3></a> </li> 
+               <li> <a href="#"> <h3>Safety </h3></a> </li> 
+               <li> <a href="#"> <h3>Strollers</h3></a> </li> 
+               <li> <a href="#"> <h3>Toys</h3></a> </li> 
+               <li> <a href="#"> <h3>Travel</h3></a> </li>
+           </ul> 
+           <h2>Gender</h2> 
+           <ul style=" list-style-type: none;"> 
+               <li> <a href="#"> <h3>Girl</h3></a> </li>
+               <li> <a href="#"> <h3>Boys</h3></a> </li> 
+               <li> <a href="#"> <h3>All</h3></a> </li> 
+           </ul>
+           <h2>Popular Stores</h2>
+           <ul style=" list-style-type: none;"> <li> <a href="#"> <h3>BuyBuyBaby</h3></a> </li> 
+               <li> <a href="#"> <h3>DNA Miracles</h3></a> </li>
+           </ul>
+           <h2>Brand</h2> 
+           <ul style=" list-style-type: none;">
+               <li> <a href="#"> <h3>DNA Miracles</h3></a> </li> 
+               <li> <a href="#"> <h3>Ralph Lauren</h3></a> </li> 
+               <li> <a href="#"> <h3>Carter's</h3></a> </li> 
+               <li> <a href="#"> <h3>Old Navy</h3></a> </li> 
+               <li> <a href="#"> <h3>Gap</h3></a> </li> 
+               <li> <a href="#"> <h3>OshKosh B'Gosh</h3></a> </li> 
+               <li> <a href="#"> <h3>Recaro</h3></a> </li> 
+               <li> <a href="#"> <h3>Trend Lab</h3></a> </li> 
+               <li> <a href="#"> <h3>Disney</h3></a> </li> 
+           </ul> 
+        <br>
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="92.jpg" width="150px" height="300px;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="91.jpg" width="150px" height="300px;">
+        <br>
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="1.png" width="150px" height="800px;">
+      
+    </div>
+    <div class="header">
+     <img style="margin-right:100PX;padding: 0;width: 1120px; padding: 10px;margin: 10px;" name="slide">
+</div>
+    <div class="blog">
+      <div class="content">
+                   <div class="part">
+          <img src="2.jpg">
+             <p>By Handi Craft Sold by NY Baby Store
+Write a Review
+<del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+                             <div class="part">
+          <img src="33.jpg">
+             <p>By Handi Craft Sold by NY Baby Store
+Write a Review
+<del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+                             <div class="part">
+          <img src="3.jpg">
+             <p>By Handi Craft Sold by NY Baby Store
+Write a Review
+<del>$6.99</del>
+<br>$15600</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+                             <div class="part">
+          <img src="4.jpg">
+             <p>By Handi Craft Sold by NY Baby Store
+Write a Review
+<del>$6.99</del>
+<br>$65.00 </p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+          </div>
+          <div class="part">
+          <img src="5.jpg">
+             <p>By Handi Craft Sold by NY<br>
+       Baby Store Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+                                       <div class="part">
+          <img src="6.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+                                       <div class="part">
+          <img src="7.jpg">
+             <p>By Handi Craft Sold by NY <br>Baby Store
+Write a Review
+<br><del>$6.99</del>
+<br>$56.00 </p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+                                       <div class="part">
+          <img src="33.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+                                                 <div class="part">
+          <img src="9.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+                                               <div class="part">
+          <img src="32.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+                                               <div class="part">
+          <img src="12.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+                                               <div class="part">
+          <img src="13.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+                                               <div class="part">
+          <img src="14.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>                                       <div class="part">
+          <img src="15.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>                                       <div class="part">
+          <img src="16.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>                                       <div class="part">
+          <img src="17.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+                                               <div class="part">
+          <img src="18.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>                                       <div class="part">
+          <img src="19.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>                                       <div class="part">
+          <img src="20.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>                                       <div class="part">
+          <img src="21.jpg">
+             <p>By Handi Craft Sold by NY<br> Baby Store
+Write a Review
+<br><del>$6.99</del><br> $56.00</p>
+             <p class="bord">
+               <button>Buy Now</button>
+             </p>
+          </div>
+        <br>
+        </div>
+    <center>
+    <div id="example1">
+<h1>Lorem Ipsum Dolor</h1>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod <br>tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    Ut wisi enim ad minim veniam, quis<br> nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+        <br>
+    <img style="cursor: pointer" src="92.jpg" width="600px" height="300px">
+    </center>
+        <br>
+            <center>
+    <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="file:///C:/Users/Ahmed%20Ali/Desktop/kids/progect/%D9%85%D9%83%D8%A7%D9%86%20%D9%84%D9%84%D8%B7%D9%81%D9%84/second%20page/kids.htm">1</a>
+    <a href="file:///C:/Users/Ahmed%20Ali/Desktop/kids/progect/%D9%85%D9%83%D8%A7%D9%86%20%D9%84%D9%84%D8%B7%D9%81%D9%84/third/third.htm">2</a>
+    <a href="file:///C:/Users/Ahmed%20Ali/Desktop/kids/progect/%D9%85%D9%83%D8%A7%D9%86%20%D9%84%D9%84%D8%B7%D9%81%D9%84/first%20page/contact%20us%20.html">3</a>
+    <a href="#">&raquo;</a>
+</div>
+    </center>
+         <br>
+        <br>
+        <hr>
+        <hr>
+        <center>
+        <img src="95.jpg">
+        </center>
+    </div>
+    </body>
